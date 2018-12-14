@@ -1,0 +1,5 @@
+DEPENDENCIES
+  docker
+
+GRAPH
+  docker (4.8.0)

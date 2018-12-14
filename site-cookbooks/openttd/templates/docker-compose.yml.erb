@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  openttd:
+    image: bateau/openttd
+    ports:
+      - 3979:3979/tcp
+      - 3979:3979/udp
+    volumes:
+      - /home/ubuntu/openttd:/home/openttd/.openttd
+    environment:
+      PUID: 1000
+      PGID: 1000
