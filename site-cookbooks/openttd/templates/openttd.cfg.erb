@@ -17,43 +17,46 @@ gui_zoom = 2
 
 [difficulty]
 max_no_competitors = 0
-number_towns = 0
-industry_density = 2
-max_loan = 100000
-initial_interest = 4
+<% if node['set_number_of_towns'] %>
+number_towns = 4
+<% else %>
+number_towns = <%= node['number_towns'] || 1 %>
+<% end %>
+industry_density = <%= node['industry_density'] || 3 %>
+max_loan = <%= node['max_loan'] || 100000 %>
+initial_interest = 1
 vehicle_costs = 0
 competitor_speed = 2
 vehicle_breakdowns = 1
 subsidy_multiplier = 2
 construction_cost = 2
-terrain_type = 3
-quantity_sea_lakes = 4
+terrain_type = <%= node['terrain_type'] || 3 %>
+quantity_sea_lakes = <%= node['quantity_sea_lakes'] || 1 %>
 economy = true
 line_reverse_mode = false
 disasters = false
-town_council_tolerance = 1
+town_council_tolerance = <%= node['town_council_tolerance'] || 1 %>
 
 [game_creation]
-town_name = english
-landscape = temperate
+town_name = <%= node['town_name'] || 'english' %>
+landscape = <%= node['landscape'] || 'temperate' %>
 snow_line_height = 15
-starting_year = 1945
+starting_year = <%= node['starting_year'] || 1945 %>
 land_generator = 1
 oil_refinery_limit = 32
 tgen_smoothness = 2
 variety = 4
-generation_seed = 2427816511
-tree_placer = 2
+tree_placer = 3
 heightmap_rotation = 0
 se_flat_world_height = 1
 map_x = <%= node['map_x'] || 10 %>
 map_y = <%= node['map_y'] || 10 %>
-water_borders = 15
-custom_town_number = 1
+water_borders = <%= node['water_borders'] || 15 %>
+custom_town_number = <%= node['set_number_of_towns'] || 5 %>
 custom_sea_level = 48
 min_river_length = 16
 river_route_random = 5
-amount_of_rivers = 2
+amount_of_rivers = <%= node['amount_of_rivers'] || 2 %>
 
 [vehicle]
 road_side = left
@@ -375,11 +378,9 @@ server_admin_port = 3977
 server_admin_chat = true
 server_advertise = false
 lan_internet = 0
-client_name =
 server_password = <%= @server_password %>
 rcon_password = <%= @rcon_password %>
 admin_password = <%= @admin_password %>
-default_company_pass =
 server_name = <%= node['server_name'] || 'Surminus OpenTTD' %>
 autoclean_companies = false
 autoclean_unprotected = 12
