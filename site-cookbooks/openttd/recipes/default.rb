@@ -51,9 +51,8 @@ template '/home/ubuntu/openttd/openttd.cfg' do
     rcon_password: rcon_password,
     admin_password: admin_password
   )
-  notifies :run, 'execute[start_openttd]', :delayed
 end
 
 execute 'start_openttd' do
-  command 'docker-compose -f /home/ubuntu/docker-compose.yml restart || docker-compose -f /home/ubuntu/docker-compose.yml up -d'
+  command 'docker-compose -f /home/ubuntu/docker-compose.yml up -d'
 end
