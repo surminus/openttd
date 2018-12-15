@@ -22,7 +22,7 @@ number_towns = 4
 <% else %>
 number_towns = <%= node['number_towns'] || 1 %>
 <% end %>
-industry_density = <%= node['industry_density'] || 3 %>
+industry_density = <%= node['industry_density'] || 5 %>
 max_loan = <%= node['max_loan'] || 100000 %>
 initial_interest = 1
 vehicle_costs = 0
@@ -293,7 +293,7 @@ disable_unsuitable_building = true
 new_nonstop = false
 stop_location = 2
 keep_all_autosave = false
-autosave_on_exit = false
+autosave_on_exit = true
 max_num_autosaves = 16
 auto_euro = true
 news_message_timeout = 2
