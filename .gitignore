@@ -19,7 +19,6 @@ cookbooks/
 
 ## Ignore Chef-Zero files
 clients
-nodes
 
 # ## OS junk files
 # [Tt]humbs.db
