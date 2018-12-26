@@ -1,14 +1,8 @@
 {
   "run_list": [
-    "recipe[openttd]"
+    "role[toytown]"
   ],
   "automatic": {
     "ipaddress": "toytown"
-  },
-  "attributes": {
-    "landscape": "toytown",
-    "terrain_type": "3",
-    "town_name": "silly",
-    "water_borders": "2"
   }
 }
