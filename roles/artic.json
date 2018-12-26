@@ -1,14 +1,14 @@
 {
   "name": "toytown",
-  "description": "Create a Toytown OpenTTD server",
+  "description": "Create an artic OpenTTD server",
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "landscape": "toyland",
+    "landscape": "artic",
     "terrain_type": "3",
-    "town_name": "silly",
-    "water_borders": "2",
-    "server_name": "Surminus Toytown"
+    "town_name": "english",
+    "water_borders": "4",
+    "server_name": "Surminus Artic"
   },
   "run_list": [
     "recipe[openttd]"

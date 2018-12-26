@@ -1,0 +1,8 @@
+{
+  "run_list": [
+    "role[temperate]"
+  ],
+  "automatic": {
+    "ipaddress": "temperate"
+  }
+}

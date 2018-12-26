@@ -1,8 +1,0 @@
-{
-  "run_list": [
-    "role[toytown]"
-  ],
-  "automatic": {
-    "ipaddress": "toytown"
-  }
-}
