@@ -4,7 +4,9 @@
   "chef_type": "role",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "industry_density": "1",
+    "industry_density": "2",
+    "initial_city_size": "5",
+    "larger_towns": "10",
     "map_x": "9",
     "map_y": "9",
     "max_bridge_length": "128",
@@ -13,6 +15,7 @@
     "max_tunnel_length": "128",
     "number_towns": "1",
     "server_name": "Surminus Rail Network",
+    "snow_line_height": "10",
     "station_spread": "30",
     "terrain_type": "1",
     "town_council_tolerance": "0",

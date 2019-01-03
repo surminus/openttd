@@ -45,7 +45,7 @@ town_council_tolerance = <%= node['town_council_tolerance'] || 1 %>
 [game_creation]
 town_name = <%= node['town_name'] || 'english' %>
 landscape = <%= node['landscape'] || 'temperate' %>
-snow_line_height = 15
+snow_line_height = <%= node['snow_line_height'] || 15 %>
 starting_year = <%= node['starting_year'] || 1945 %>
 land_generator = 1
 oil_refinery_limit = 32
@@ -137,8 +137,8 @@ smooth_economy = true
 allow_shares = true
 feeder_payment_share = 75
 town_growth_rate = 2
-larger_towns = 5
-initial_city_size = 2
+larger_towns = <%= node['larger_towns'] || 5 %>
+initial_city_size = <%= node['initial_city_size'] || 2 %>
 mod_road_rebuild = true
 dist_local_authority = 20
 town_noise_population[0] = 800
