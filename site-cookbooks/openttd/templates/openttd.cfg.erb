@@ -15,6 +15,11 @@ invisibility_options = 0
 last_newgrf_count = 0
 gui_zoom = 2
 
+<% if node['station_spread'] %>
+[patches]
+station_spread = <%= node['station_spread'] %>
+<% end %>
+
 [difficulty]
 max_no_competitors = 0
 <% if node['set_number_of_towns'] %>
@@ -64,7 +69,7 @@ train_acceleration_model = 1
 roadveh_acceleration_model = 1
 train_slope_steepness = 3
 roadveh_slope_steepness = 7
-max_train_length = 7
+max_train_length = <%= node['max_train_length'] || "7" %>
 smoke_amount = 1
 never_expire_vehicles = true
 max_trains = 800
@@ -97,9 +102,9 @@ tree_per_64k_frames = 4194304
 tree_frame_burst = 4096
 autoslope = true
 extra_dynamite = true
-max_bridge_length = 64
+max_bridge_length = <%= node['max_bridge_length'] || "64" %>
 max_bridge_height = 12
-max_tunnel_length = 64
+max_tunnel_length = <%= node['max_tunnel_length'] || "64" %>
 train_signal_side = 1
 road_stop_on_town_road = true
 road_stop_on_competitor_road = true

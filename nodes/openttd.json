@@ -1,6 +1,6 @@
 {
   "run_list": [
-    "recipe[openttd]"
+    "role[rail_network]"
   ],
   "automatic": {
     "ipaddress": "openttd"
