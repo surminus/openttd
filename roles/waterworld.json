@@ -1,0 +1,33 @@
+{
+  "name": "rail_network",
+  "description": "Emphasis on designing rail networks",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "amount_of_rivers": "35",
+    "custom_sea_level": "60",
+    "industry_density": "2",
+    "initial_city_size": "10",
+    "larger_towns": "5",
+    "map_x": "9",
+    "map_y": "9",
+    "max_bridge_length": "128",
+    "max_loan": "500000",
+    "max_train_length": "20",
+    "max_tunnel_length": "128",
+    "min_river_length": "32",
+    "number_towns": "2",
+    "quantity_sea_lakes": "4",
+    "river_route_random": "20",
+    "server_name": "Surminus Waterworld",
+    "snow_line_height": "10",
+    "station_spread": "30",
+    "terrain_type": "3",
+    "town_council_tolerance": "0",
+    "town_name": "english",
+    "water_borders": "15"
+  },
+  "run_list": [
+    "recipe[openttd]"
+  ]
+}

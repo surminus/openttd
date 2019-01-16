@@ -58,9 +58,9 @@ map_x = <%= node['map_x'] || 10 %>
 map_y = <%= node['map_y'] || 10 %>
 water_borders = <%= node['water_borders'] || 15 %>
 custom_town_number = <%= node['set_number_of_towns'] || 5 %>
-custom_sea_level = 48
-min_river_length = 16
-river_route_random = 5
+custom_sea_level = <%= node['custom_sea_level'] || 48 %>
+min_river_length = <%= node['min_river_length'] || 16 %>
+river_route_random = <%= node['river_route_random'] || 5 %>
 amount_of_rivers = <%= node['amount_of_rivers'] || 2 %>
 
 [vehicle]

@@ -1,6 +1,6 @@
 {
   "run_list": [
-    "role[temperate]"
+    "role[waterworld]"
   ],
   "automatic": {
     "ipaddress": "temperate"
